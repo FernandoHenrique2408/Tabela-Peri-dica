@@ -48,4 +48,9 @@ export class CriaElementoDto {
     @IsString({message:'Configuração Eletronica: eletronica e uma string'})
     @IsNotEmpty({message:'Configuração Eletronica: atomica não pode ser vazia'})
     configuracao_eletronica: string;
+
+    @IsString({message: 'O grupo do elemento não pode ser vazio'})
+    @IsNotEmpty({message: 'O grupo do elemento não pode ser vazio'})
+    @MaxLength(35,{message: 'O grupo so pode ter no maximo 35 caracters'})
+    grupo: string;
 }
